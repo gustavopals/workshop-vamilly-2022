@@ -1,0 +1,21 @@
+{
+  "name": "workshop-vamilly-2022",
+  "version": "1.0.0",
+  "description": "Projeto modelo para o workshop Vamilly 2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "workshop-vamilly-2022"
+  },
+  "keywords": [
+    "dashboard",
+    "po-ui",
+    "protheus",
+    "code"
+  ],
+  "author": "Gustavo Pals",
+  "license": "ISC"
+}
