@@ -47,3 +47,15 @@ Em seguida, atualize o arquivo angular.json para utilizar o tema.
 ## Rode seu projeto
 
 `ng serve`
+
+## Desenvolvimento
+
+- Criação do módulo de Shared.
+
+`ng g m modules/shared`
+
+- Criação do módulo de pessoas.
+
+`ng g m modules/people --routing`
+
+`ng g c pages/people/people`
