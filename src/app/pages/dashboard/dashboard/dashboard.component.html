@@ -1,1 +1,21 @@
-<p>dashboard works!</p>
+<po-page-default p-title="Meu Dashboard Customizado">
+  <div class="po-row">
+    <po-widget class="po-lg-3" [p-height]="250" p-title="Colaborador">
+      <po-avatar class="po-md-6" p-size="xl" [p-src]="avatar"> </po-avatar>
+
+      <div class="po-md-6">
+        <p><strong>Name:</strong> info</p>
+        <p><strong>Phone:</strong> info</p>
+        <p><strong>E-mail:</strong> info</p>
+      </div>
+    </po-widget>
+	<po-chart
+      class="po-md-6 po-mt-2"
+      p-title="While the coffee price falls, all three of these companies profit margins have risen  - (US$ millions)"
+      [p-options]="chartAreaOptions"
+      [p-categories]="chartAreaCategories"
+      [p-series]="chartAreaSeries"
+    >
+    </po-chart>
+  </div>
+</po-page-default>
