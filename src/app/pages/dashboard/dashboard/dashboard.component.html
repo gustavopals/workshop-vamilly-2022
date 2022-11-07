@@ -1,7 +1,18 @@
 <po-page-default p-title="Meu Dashboard Customizado">
+
+	<div class="po-row">
+		<div class="po-row">
+			<div class="po-col">1</div>
+			<div class="po-col">2</div>
+		</div>
+		<div class="po-row">
+			<div class="po-col">3</div>
+		</div>
+	</div>
+
   <div class="po-row">
-    <po-widget class="po-lg-3" [p-height]="250" p-title="Colaborador">
-      <po-avatar class="po-md-6" p-size="xl" [p-src]="avatar"> </po-avatar>
+    <po-widget class="po-lg-4" [p-height]="200" p-title="Colaborador">
+      <po-avatar class="po-md-6" p-size="lg" [p-src]="avatar"> </po-avatar>
 
       <div class="po-md-6">
         <p><strong>Name:</strong> info</p>
@@ -9,13 +20,18 @@
         <p><strong>E-mail:</strong> info</p>
       </div>
     </po-widget>
+
 	<po-chart
-      class="po-md-6 po-mt-2"
+      class="po-md-8"
+	  [p-height]="400"
       p-title="While the coffee price falls, all three of these companies profit margins have risen  - (US$ millions)"
       [p-options]="chartAreaOptions"
       [p-categories]="chartAreaCategories"
       [p-series]="chartAreaSeries"
     >
     </po-chart>
+  </div>
+  <div class="po-row">
+
   </div>
 </po-page-default>
