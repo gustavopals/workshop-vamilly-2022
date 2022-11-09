@@ -17,13 +17,13 @@
       >
       </po-avatar>
 
-      <div class="po-md-8">
+      <div class="po-lg-8 po-sm-12">
         <p><strong>Colaborador:</strong> {{ contact.name }}</p>
         <p><strong>Telefone:</strong> {{ formatPhoneNumber(contact.phone) }}</p>
         <p><strong>E-mail:</strong> {{ contact.email }}</p>
       </div>
     </po-widget>
-    <div class="po-md-4">
+    <div class="po-lg-4 po-sm-12">
       <po-gauge
         [p-height]="300"
         p-title="Média de horas faturadas"
@@ -32,7 +32,7 @@
         [p-ranges]="mediaHoras"
       ></po-gauge>
     </div>
-    <div class="po-md-4">
+    <div class="po-lg-4 po-sm-12">
       <po-gauge
         p-title="Horas não faturadas"
         p-value="25"
@@ -47,14 +47,12 @@
   </po-modal>
   <br />
   <div class="po-row">
-    <div class="po-md-2">
+    <div class="po-lg-4 po-sm-12">
       <po-calendar></po-calendar>
     </div>
-    <div class="po-md-10">
-		<po-table
-		p-striped="true"
-		[p-columns]="columns"
-		[p-items]="listaTabela"> </po-table>
+    <div class="po-lg-8 po-sm-12">
+      <po-table p-striped="true" [p-columns]="columns" [p-items]="listaTabela">
+      </po-table>
     </div>
   </div>
 </po-page-default>
