@@ -1,4 +1,4 @@
-<po-page-default p-title="Minha Home Customizada">
+<po-page-default p-title="GAV - Gerenciamento de Horas">
   <div class="po-row">
     <po-widget
       class="po-lg-4"
@@ -18,26 +18,26 @@
       </po-avatar>
 
       <div class="po-md-8">
-        <p><strong>Name:</strong> {{ contact.name }}</p>
-        <p><strong>Phone:</strong> {{ formatPhoneNumber(contact.phone) }}</p>
+        <p><strong>Colaborador:</strong> {{ contact.name }}</p>
+        <p><strong>Telefone:</strong> {{ formatPhoneNumber(contact.phone) }}</p>
         <p><strong>E-mail:</strong> {{ contact.email }}</p>
       </div>
     </po-widget>
     <div class="po-md-4">
       <po-gauge
         [p-height]="300"
-        p-title="Sales performance"
+        p-title="Média de horas faturadas"
         p-value="82"
-        p-description="The sales increased in 82% in the first bimester of 2020"
-        [p-ranges]="salesRanges"
+        p-description="Aumento de 12% referente aos 3 ultimos meses"
+        [p-ranges]="mediaHoras"
       ></po-gauge>
     </div>
     <div class="po-md-4">
       <po-gauge
-        p-title="Employee turnover rate"
+        p-title="Horas não faturadas"
         p-value="25"
-        p-description="25% of turnover"
-        [p-ranges]="turnoverRanges"
+        p-description="Abaixo de 10 horas"
+        [p-ranges]="mediaHorasNaoFaturadas"
       ></po-gauge>
     </div>
   </div>
@@ -45,4 +45,16 @@
   <po-modal #modal p-title="Profile Image">
     <img [src]="avatar" class="sample-center-image" />
   </po-modal>
+  <br />
+  <div class="po-row">
+    <div class="po-md-2">
+      <po-calendar></po-calendar>
+    </div>
+    <div class="po-md-10">
+		<po-table
+		p-striped="true"
+		[p-columns]="columns"
+		[p-items]="listaTabela"> </po-table>
+    </div>
+  </div>
 </po-page-default>

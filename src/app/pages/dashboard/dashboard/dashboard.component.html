@@ -4,7 +4,7 @@
       <div class="po-row">
         <po-chart
           class="po-md-12 po-mt-2"
-          p-title="Participation by country in world exports - %"
+          p-title="Participação por país nas exportações mundiais - %"
           [p-options]="options"
           [p-categories]="categories"
           [p-series]="participationByCountryInWorldExports"
@@ -14,7 +14,7 @@
 
         <po-chart
           class="po-md-12 po-mt-2"
-          p-title="Evolution of coffee and some competitors - %"
+          p-title="Evolução do café e alguns concorrentes - %"
           [p-options]="optionsColumn"
           [p-categories]="categoriesColumn"
           [p-series]="evolutionOfCoffeeAndSomeCompetitors"
@@ -26,7 +26,7 @@
     <div class="po-md-12 po-lg-6">
       <po-chart
         class="po-md-12 po-mt-2"
-        p-title="Ranking of the most purchased and consumed beverages in Germany between 2018 and 2020 - in %"
+        p-title="Ranking das bebidas mais compradas e consumidas na Alemanha entre 2018 e 2020 - em %"
         [p-height]="816"
         [p-categories]="consumptionPerCapitaItems"
         [p-series]="consumptionPerCapita"
@@ -39,7 +39,7 @@
     <div class="po-md-12">
       <po-chart
         class="po-lg-6 po-mt-2"
-        p-title="Top 5 coffee producing countries (in tons)"
+        p-title="Os 5 principais países produtores de café (em toneladas)"
         [p-series]="coffeeProduction"
         (p-series-click)="searchMore($event)"
       >
@@ -47,7 +47,7 @@
 
       <po-chart
         class="po-lg-6 po-mt-2"
-        p-title="Top 5 Coffee Consuming Countries (in kg per capita)"
+        p-title="Os 5 principais países consumidores de café (em kg per capita)"
         [p-series]="coffeeConsumption"
         [p-type]="coffeConsumingChartType"
         (p-series-click)="showMeTheDates($event)"
@@ -58,7 +58,7 @@
     <div class="po-row">
       <po-chart
         class="po-md-6 po-mt-2"
-        p-title="While the coffee price falls, all three of these companies profit margins have risen  - (US$ millions)"
+        p-title="Enquanto o preço do café cai, as margens de lucro dessas três empresas aumentaram - (US$ milhões)"
         [p-options]="chartAreaOptions"
         [p-categories]="chartAreaCategories"
         [p-series]="chartAreaSeries"
@@ -67,17 +67,15 @@
 
       <div class="po-md-6 po-mt-2">
         <po-widget p-height="198">
-          <div class="po-font-title po-text-center po-pt-5">66 billion</div>
+          <div class="po-font-title po-text-center po-pt-5">66 bilhões</div>
           <div class="po-text-center">
-            cups of coffee are consumed per year in U.S.
+            xícaras de café são consumidas por ano nos EUA
           </div>
         </po-widget>
 
         <po-widget p-height="198">
-          <div class="po-font-title po-text-center po-pt-5">2nd most</div>
-          <div class="po-text-center">
-            traded commodity in the world second to Oil.
-          </div>
+          <div class="po-font-title po-text-center po-pt-5">2ª</div>
+          <div class="po-text-center">commodity negociada no mundo.</div>
         </po-widget>
       </div>
     </div>
@@ -86,7 +84,7 @@
   <div class="po-row">
     <po-container class="po-lg-12 po-mt-2">
       <div class="po-font-text-bold">
-        Top 10 Largest Coffee Chains in the World
+        As 10 maiores cadeias de café do mundo
       </div>
 
       <po-table p-container="shadow" [p-items]="items"> </po-table>

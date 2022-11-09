@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PoGaugeRanges } from '@po-ui/ng-components';
+import { PoGaugeRanges, PoTableColumn } from '@po-ui/ng-components';
 
 @Component({
 	selector: 'app-home',
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 	ngOnInit(): void {
 	}
 
-	avatar = 'https://picsum.photos/144/144';
+	avatar = 'assets/img/unnamed.webp';
 
 	contact = {
 		name: 'Gustavo André Pals',
@@ -21,17 +21,70 @@ export class HomeComponent implements OnInit {
 		phone: '42999365350'
 	};
 
-	salesRanges: Array<PoGaugeRanges> = [
-		{ from: 0, to: 50, label: 'Sales reduction', color: '#c64840' },
-		{ from: 50, to: 75, label: 'Average sales', color: '#ea9b3e' },
-		{ from: 75, to: 100, label: 'Sales soared', color: '#00b28e' }
+	mediaHoras: Array<PoGaugeRanges> = [
+		{ from: 0, to: 50, label: 'Redução', color: '#c64840' },
+		{ from: 50, to: 75, label: 'Média Atual', color: '#ea9b3e' },
+		{ from: 75, to: 100, label: 'Aumento', color: '#00b28e' }
 	];
 
-	turnoverRanges: Array<PoGaugeRanges> = [
-		{ from: 0, to: 50, label: 'Low rate', color: '#00b28e' },
-		{ from: 50, to: 75, label: 'Average rate', color: '#ea9b3e' },
-		{ from: 75, to: 100, label: 'High rate', color: '#c64840' }
-	  ];
+	mediaHorasNaoFaturadas: Array<PoGaugeRanges> = [
+		{ from: 0, to: 50, label: 'Excelente', color: '#00b28e' },
+		{ from: 50, to: 75, label: 'OK', color: '#ea9b3e' },
+		{ from: 75, to: 100, label: 'Atenção', color: '#c64840' }
+	];
+
+	columns: Array<PoTableColumn> = [
+		{ property: 'Periodo', label: 'Periodo' },
+		{
+			property: 'Cliente', type: 'label', label: 'Cliente', labels: [
+				{ value: 'Makita', color: 'color-07', label: 'Makita' },
+				{ value: 'Vamilly', color: 'color-01', label: 'Vamilly' },
+				{ value: 'VPereck', color: 'color-02', label: 'VPereck' },
+				{ value: 'DHL', color: 'color-08', label: 'DHL' }
+			]
+		},
+		{ property: 'Projeto', label: 'Projeto' },
+		{ property: 'Horas', label: 'Horas' },
+	]
+
+	listaTabela: Array<any> = [
+		{
+			Periodo: 'Abr/2022',
+			Cliente: 'Makita',
+			Projeto: 'Projeto A',
+			Horas: '99 Horas',
+		},
+		{
+			Periodo: 'Abr/2022',
+			Cliente: 'Vamilly',
+			Projeto: 'Projeto B',
+			Horas: '99 Horas',
+		},
+		{
+			Periodo: 'Abr/2022',
+			Cliente: 'VPereck',
+			Projeto: 'Projeto C',
+			Horas: '99 Horas',
+		},
+		{
+			Periodo: 'Abr/2022',
+			Cliente: 'DHL',
+			Projeto: 'Projeto D',
+			Horas: '99 Horas',
+		},
+		{
+			Periodo: 'Mai/2022',
+			Cliente: 'Makita',
+			Projeto: 'Projeto A',
+			Horas: '99 Horas',
+		},
+		{
+			Periodo: 'Mai/2022',
+			Cliente: 'Vamilly',
+			Projeto: 'Projeto B',
+			Horas: '99 Horas',
+		}
+	]
 
 	callContact(phone) {
 		window.open(`tel:${phone}`, '_self');

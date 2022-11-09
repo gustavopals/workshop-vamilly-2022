@@ -7,10 +7,6 @@ import { PoChartOptions, PoChartSerie, PoChartType, PoDialogService } from '@po-
 	styleUrls: ['./dashboard.component.scss']
 })
 
-// chart
-// gauge
-// widget
-
 export class DashboardComponent implements OnInit {
 
 	ngOnInit(): void {
@@ -25,22 +21,22 @@ export class DashboardComponent implements OnInit {
 
 	chartAreaCategories: Array<string> = ['Jan-18', 'Jul-18', 'Jan-19', 'Jul-19', 'Jan-20', 'Jul-20', 'Jan-21'];
 
-	categoriesColumn: Array<string> = ['coffee', 'chocolate', 'tea'];
+	categoriesColumn: Array<string> = ['café', 'chocolate', 'chá'];
 
 	consumptionPerCapitaItems: Array<string> = [
-		'Water',
-		'Fruit Juice',
-		'Coffee',
-		'Cola drinks',
-		'Pils',
-		'Tea',
-		'Red Wine',
-		'Prosecco',
+		'Agua',
+		'Suco de Laranja',
+		'Café',
+		'Refrigerantes',
+		'Cerveja',
+		'Chá',
+		'Vinho',
+		'Vinho Branco',
 		'Sodas',
-		'Beer 0% A.',
-		'Wheat Beer',
+		'Cerveja 0% A.',
+		'Cerveja de Tripo',
 		'Milk Shakes',
-		'Icetea'
+		'Chá Gelado'
 	];
 
 	chartAreaSeries: Array<PoChartSerie> = [
@@ -56,11 +52,11 @@ export class DashboardComponent implements OnInit {
 	];
 
 	coffeeConsumption: Array<PoChartSerie> = [
-		{ label: 'Finland', data: 9.6, tooltip: 'Finland (Europe)' },
-		{ label: 'Norway', data: 7.2, tooltip: 'Norway (Europe)' },
-		{ label: 'Netherlands', data: 6.7, tooltip: 'Netherlands (Europe)' },
-		{ label: 'Slovenia', data: 6.1, tooltip: 'Slovenia (Europe)' },
-		{ label: 'Austria', data: 5.5, tooltip: 'Austria (Europe)' }
+		{ label: 'Finlândia', data: 9.6, tooltip: 'Finlândia (Europa)' },
+		{ label: 'Noruega', data: 7.2, tooltip: 'Noruega (Europa)' },
+		{ label: 'Holanda', data: 6.7, tooltip: 'Holanda (Europa)' },
+		{ label: 'Slovenia', data: 6.1, tooltip: 'Slovenia (Europa)' },
+		{ label: 'Austria', data: 5.5, tooltip: 'Austria (Europa)' }
 	];
 
 	consumptionPerCapita: Array<PoChartSerie> = [
@@ -69,7 +65,7 @@ export class DashboardComponent implements OnInit {
 	];
 
 	participationByCountryInWorldExports: Array<PoChartSerie> = [
-		{ label: 'Brazil', data: [35, 32, 25, 29, 33, 33], color: 'color-10' },
+		{ label: 'Brasil', data: [35, 32, 25, 29, 33, 33], color: 'color-10' },
 		{ label: 'Vietnam', data: [15, 17, 23, 19, 22, 18] },
 		{ label: 'Colombia', data: [8, 7, 6, 9, 10, 11] },
 		{ label: 'India', data: [5, 6, 5, 4, 5, 5] },
@@ -80,15 +76,15 @@ export class DashboardComponent implements OnInit {
 		{ label: '2014', data: [91, 40, 42], type: PoChartType.Column },
 		{ label: '2017', data: [93, 52, 18], type: PoChartType.Column },
 		{ label: '2020', data: [95, 21, -17], type: PoChartType.Column },
-		{ label: 'Coffee consumption in Brazil', data: [34, 27, 79], type: PoChartType.Line, color: 'color-10' }
+		{ label: 'Consumo de café no Brasil', data: [34, 27, 79], type: PoChartType.Line, color: 'color-10' }
 	];
 
 	coffeeProduction: Array<PoChartSerie> = [
-		{ label: 'Brazil', data: 2796, tooltip: 'Brazil (South America)', color: 'color-10' },
+		{ label: 'Brasil', data: 2796, tooltip: 'Brasil (América do Sul)', color: 'color-10' },
 		{ label: 'Vietnam', data: 1076, tooltip: 'Vietnam (Asia)' },
-		{ label: 'Colombia', data: 688, tooltip: 'Colombia (South America)' },
+		{ label: 'Colombia', data: 688, tooltip: 'Colombia (América do Sul)' },
 		{ label: 'Indonesia', data: 682, tooltip: 'Indonesia (Asia/Oceania)' },
-		{ label: 'Peru', data: 273, tooltip: 'Peru (South America)' }
+		{ label: 'Peru', data: 273, tooltip: 'Peru (América do Sul)' }
 	];
 
 	items: Array<any> = [
