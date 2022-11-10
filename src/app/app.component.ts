@@ -15,8 +15,8 @@ export class AppComponent {
 		{ label: 'Dashboard', link: '/dashboard', icon: 'po-icon-eye', shortLabel: 'Dashboard' }
 	];
 
-	logo: any = '/assets/img/logo-vamilly-custom.png'
-	shortLogo: any = '/assets/img/logo-vamilly-short.png'
+	logo: any = 'assets/img/logo-vamilly-custom.png'
+	shortLogo: any = 'assets/img/logo-vamilly-short.png'
 
 	private onClick() {
 		alert('Clicked in menu item')
